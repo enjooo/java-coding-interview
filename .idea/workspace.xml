@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16dbd5a5-43ab-4d8a-8552-f31ed295312c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/oop/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/OOPApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/api/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/api/ResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/command/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/command/ConcreteCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/command/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/command/Invoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/command/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/ILoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/LoginHandlerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/LoginType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/handler/AlipayLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/handler/PasswordLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/handler/PhoneLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/handler/SlienLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/pattern/strategy/handler/WxMiniappLoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/service/ILoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oop/src/main/java/com/vftour/study/oop/designpattern/service/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/vftour/study/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -128,7 +109,7 @@
       <workItem from="1666834450747" duration="798000" />
       <workItem from="1666849129691" duration="975000" />
       <workItem from="1666850144323" duration="628000" />
-      <workItem from="1666850791592" duration="1504000" />
+      <workItem from="1666850791592" duration="2199000" />
     </task>
     <servers />
   </component>
