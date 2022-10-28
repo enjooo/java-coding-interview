@@ -19,5 +19,7 @@ target/
 *.iml
 *.ipr
 
+!**.iml
+
 ### VS Code ###
 .vscode/
