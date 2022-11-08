@@ -12,6 +12,7 @@
     <modules>
         <module>oop</module>
         <module>web</module>
+        <module>jdbc</module>
     </modules>
 
     <!--  这里的属性会被子模块继承  -->
