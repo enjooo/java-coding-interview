@@ -1,4 +1,4 @@
-package com.vftour.study;
+package com.vftour.study.oop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0
  */
 @SpringBootApplication
-public class StudyApplication {
+public class OOPApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StudyApplication.class, args);
+        SpringApplication.run(OOPApplication.class, args);
     }
 
 }
