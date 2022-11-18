@@ -1,6 +1,6 @@
 package com.vftour.study.oop.designpattern.service;
 
-import com.vftour.study.oop.designpattern.api.Result;
+import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
 import org.springframework.lang.NonNull;
 

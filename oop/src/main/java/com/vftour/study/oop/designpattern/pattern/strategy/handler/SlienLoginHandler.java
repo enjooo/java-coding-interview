@@ -1,6 +1,6 @@
 package com.vftour.study.oop.designpattern.pattern.strategy.handler;
 
-import com.vftour.study.oop.designpattern.api.Result;
+import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.ILoginHandler;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginType;

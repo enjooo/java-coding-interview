@@ -1,4 +1,4 @@
-package com.vftour.study.oop.designpattern.api;
+package com.vftour.study.oop.api;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

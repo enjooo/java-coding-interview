@@ -1,8 +1,8 @@
-package com.vftour.study.oop.designpattern.controller;
+package com.vftour.study.oop.api.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.vftour.study.oop.designpattern.api.Result;
+import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
 import com.vftour.study.oop.designpattern.service.ILoginService;
 import org.springframework.beans.factory.annotation.Autowired;

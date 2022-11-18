@@ -1,6 +1,6 @@
 package com.vftour.study.oop.designpattern.pattern.strategy;
 
-import com.vftour.study.oop.designpattern.api.Result;
+import com.vftour.study.oop.api.Result;
 
 import java.io.Serializable;
 
