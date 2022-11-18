@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * StudyApplication
+ * 面向对象
  *
  * @author 东东 | d@tke.store
  * @date 2022/11/8 9:56
