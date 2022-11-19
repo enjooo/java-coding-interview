@@ -50,7 +50,8 @@ public class BadShape {
     }
 }
 
-调用方法
+**调用方法**
+
 new BadShape().draw(ShapeType.circle);
 ```
 
@@ -87,7 +88,8 @@ public class Rectangle implements Shape {
     }
 }
 
-调用方法
+**调用方法**
+
 List<Shape> shapes = Lists.newArrayList();
 shapes.add(new Cicle());
 shapes.add(new Square());
@@ -143,8 +145,8 @@ public class Cicle implements Shape {
 
     @Override
     public int compareTo(Shape o) {
-        //1表示第二个对象比前一个大，0表示其相等，-1表示比前一个小
-        return o.getSort() - sort;
+        //从大到小排序
+        return o.getSort() - this.getSort();
     }
 
     @Override
@@ -153,7 +155,8 @@ public class Cicle implements Shape {
     }
 }
 
-调用方法
+**调用方法**
+
 List<Shape> shapes = Lists.newArrayList();
 shapes.add(new Cicle(3));
 shapes.add(new Square(1));
