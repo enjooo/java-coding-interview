@@ -1,13 +1,13 @@
 ## 面向对象设计的原则
 
-|简称|名称|全程|
-| --- | ----- | ------ |
-| SRP | [单一职责原则]() | [Single Responsibility Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/srp) |
-| OCP | [开放封闭原则]() | [Open Closed Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/ocp)|
-| LSP | [里氏替换原则]()   | [Liskov Substitution Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/lsp) |
-| ISP | [接口分离原则]() | [Interface Segregation Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/isp) |
-| DIP | [依赖倒置原则]()  | [Dependency Inversion Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/dip)   |
-| LKP | [最少知识原则]() | [Least Knowledge Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/lkp) |
+|简称|全程|
+| --- | ----- |
+| SRP | [单一职责原则 Single Responsibility Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/srp) |
+| OCP | [开放封闭原则 Open Closed Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/ocp)|
+| LSP | [里氏替换原则 Liskov Substitution Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/lsp) |
+| ISP | [接口分离原则 Interface Segregation Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/isp) |
+| DIP | [依赖倒置原则 Dependency Inversion Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/dip)   |
+| LKP | [最少知识原则 Least Knowledge Principle](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle/lkp) |
 
 在软件开发中，为了提高软件系统的可维护性和可复用性，增加软件的可扩展性和灵活性，程序员要尽量根据 7 条原则来开发程序，从而提高软件开发效率、节约软件开发成本和维护成本。
 
