@@ -21,3 +21,71 @@
 可以通过“抽象约束、封装变化”来实现开闭原则，即通过接口或者抽象类为软件实体定义一个相对稳定的抽象层，而将相同的可变因素封装在相同的具体实现类中。
 
 因为抽象灵活性好，适应性广，只要抽象的合理，可以基本保持软件架构的稳定。而软件中易变的细节可以从抽象派生来的实现类来进行扩展，当软件需要发生变化时，只需要根据需求重新派生一个实现类来扩展就可以了。
+
+### 示例：Shape 抽象
+
+考虑下面这个例子。我们要在页面上绘制圆形（Circle）和方形（Square）。
+
+```
+public enum ShapeType {
+    circle, square,rectangle
+}
+
+public class BadShape {
+    public void draw(ShapeType type) {
+        switch (type) {
+            case circle:
+                log.info("BadShape --》 {}", "画circle");
+                break;
+            case square:
+                log.info("BadShape --》 {}", "画square");
+                break;
+            default:
+                log.info("BadShape --》 {}", "画rectangle");
+
+        }
+    }
+}
+```
+
+这里方法 draw 不符合开闭原则，因为它无法保证对新的 Shape 种类保持封闭。如果我们想要扩展这个方法，使其能够支持一个三角形（Triangle），则我们将不得不修改这个方法。事实上，每当我们需要绘制新的图形种类时，我们都不得不修改这个方法。
+
+当然这个程序仅仅是一个例子。在实践中 draw 方法中的 switch 语句将会随着需求的变化不断地增加新的图形。
+而更有可能的则是switch 语句中的 case 子句会和一些逻辑运算绑定到了一起。这将导致每一次的修改都需要测试每个case的逻辑是否正确。
+
+下面这段代码展示了符合开闭原则的 Cicle/Square 问题的一个解决方案。
+
+```
+public interface Shape {
+    void draw();
+}
+
+public class Cicle implements Shape {
+    @Override
+    public void draw() {
+        log.info("better --》 {}", "画Cicle");
+    }
+}
+
+public class Square implements Shape {
+    @Override
+    public void draw() {
+        log.info("better --》 {}", "画Square");
+    }
+}
+
+public class Rectangle implements Shape {
+    @Override
+    public void draw() {
+        log.info("better --》 {}", "画Rectangle");
+    }
+}
+```
+
+在这个例子中，我们创建了一个 Shape 抽象接口，这个接口包含一个 draw 方法。而 Circle 和 Square 都衍生自 Shape 类。
+
+注意在这里如果我们想扩展 draw 方法的行为来绘制一个新的图形种类，我们所需要做的就是增加一个从 Shape 类衍生的子类。而 draw 方法则无需进行修改。因此 draw 方法符合了开放封闭原则，它的行为可以不通过对其修改而扩展。
+
+在比较现实的情况中，Shape 类可能包含很多个方法。但是在应用程序中增加一个新的图形仍然是非常简单的，因为所需要做的仅是创建一个衍生类来实现这些函数方法。同时，我们也不再需要在应用程序内对所有图形做测试。
+
+因为更改符合开放封闭原则的程序是通过增加新的代码，而不是修改已存在的代码，之前描述的那种级联式的更改也就不存在了。
