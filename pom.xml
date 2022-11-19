@@ -14,6 +14,8 @@
         <module>web</module>
         <module>jdbc</module>
         <module>cache</module>
+        <module>scheduled</module>
+        <module>core</module>
     </modules>
 
     <!--  这里的属性会被子模块继承  -->
@@ -80,6 +82,7 @@
             <artifactId>guava</artifactId>
             <version>31.1-jre</version>
         </dependency>
+
     </dependencies>
 
 </project>
