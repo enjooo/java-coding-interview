@@ -19,6 +19,9 @@ public class BadShape {
             case square:
                 log.info("BadShape --》 {}", "画square");
                 break;
+            case triangle:
+                log.info("BadShape --》 {}", "画triangle");
+                break;
             default:
                 log.info("BadShape --》 {}", "画rectangle");
 

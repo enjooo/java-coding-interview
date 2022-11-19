@@ -8,5 +8,5 @@ package com.vftour.study.oop.principle.ocp.bad;
  * @since 1.0
  */
 public enum ShapeType {
-    circle, square,rectangle
+    circle, square,rectangle,triangle
 }

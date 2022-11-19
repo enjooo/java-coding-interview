@@ -1,10 +1,15 @@
 package com.vftour.study.oop.principle.ocp;
 
+import com.google.common.collect.Lists;
 import com.vftour.study.oop.principle.ocp.bad.BadShape;
 import com.vftour.study.oop.principle.ocp.bad.ShapeType;
-import com.vftour.study.oop.principle.ocp.better.Cicle;
-import com.vftour.study.oop.principle.ocp.better.Rectangle;
-import com.vftour.study.oop.principle.ocp.better.Shape;
+import com.vftour.study.oop.principle.ocp.change.Cicle;
+import com.vftour.study.oop.principle.ocp.change.Rectangle;
+import com.vftour.study.oop.principle.ocp.change.Shape;
+import com.vftour.study.oop.principle.ocp.change.Square;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * OcpClient
@@ -16,12 +21,40 @@ import com.vftour.study.oop.principle.ocp.better.Shape;
 public class OCPClient {
 
     public static void main(String[] args) {
+        /**
+         * 第一种方式
+         */
         new BadShape().draw(ShapeType.circle);
 
-        Shape shape = new Cicle();
-        shape.draw();
+        /**
+         * 优化方式
+         */
+//        List<Shape> shapes = Lists.newArrayList();
+//        shapes.add(new Cicle());
+//        shapes.add(new Square());
+//        shapes.add(new Rectangle());
+//        drawShape(shapes);
 
-        shape = new Rectangle();
-        shape.draw();
+        /**
+         * 迭代新功能
+         * 1. 按顺序绘制
+         */
+        List<Shape> shapes = Lists.newArrayList();
+        shapes.add(new Cicle(3));
+        shapes.add(new Square(1));
+        shapes.add(new Rectangle(2));
+        drawShape(shapes);
+    }
+
+    /**
+     * 优化方式
+     *
+     * @param shapes
+     */
+    public static void drawShape(List<Shape> shapes) {
+        Collections.sort(shapes);
+        shapes.forEach(shape -> {
+            shape.draw();
+        });
     }
 }

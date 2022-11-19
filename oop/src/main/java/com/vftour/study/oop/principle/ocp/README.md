@@ -40,12 +40,18 @@ public class BadShape {
             case square:
                 log.info("BadShape --》 {}", "画square");
                 break;
+            case triangle:
+                log.info("BadShape --》 {}", "画triangle");
+                break;
             default:
                 log.info("BadShape --》 {}", "画rectangle");
 
         }
     }
 }
+
+调用方法
+new BadShape().draw(ShapeType.circle);
 ```
 
 这里方法 draw 不符合开闭原则，因为它无法保证对新的 Shape 种类保持封闭。如果我们想要扩展这个方法，使其能够支持一个三角形（Triangle），则我们将不得不修改这个方法。事实上，每当我们需要绘制新的图形种类时，我们都不得不修改这个方法。
@@ -80,6 +86,19 @@ public class Rectangle implements Shape {
         log.info("better --》 {}", "画Rectangle");
     }
 }
+
+调用方法
+List<Shape> shapes = Lists.newArrayList();
+shapes.add(new Cicle());
+shapes.add(new Square());
+shapes.add(new Rectangle());
+drawShape(shapes);
+        
+public static void drawShape(List<Shape> shapes) {
+   shapes.forEach(shape -> {
+      shape.draw();
+   });
+}    
 ```
 
 在这个例子中，我们创建了一个 Shape 抽象接口，这个接口包含一个 draw 方法。而 Circle 和 Square 都衍生自 Shape 类。
@@ -89,3 +108,70 @@ public class Rectangle implements Shape {
 在比较现实的情况中，Shape 类可能包含很多个方法。但是在应用程序中增加一个新的图形仍然是非常简单的，因为所需要做的仅是创建一个衍生类来实现这些函数方法。同时，我们也不再需要在应用程序内对所有图形做测试。
 
 因为更改符合开放封闭原则的程序是通过增加新的代码，而不是修改已存在的代码，之前描述的那种级联式的更改也就不存在了。
+
+### 开放和闭合的选择
+
+要明白程序是不可能 100% 完全封闭的。例如，试想上面的 Shape 示例，如果我们现在要增加新的需求，Circle和Square必须以特定的顺序进行绘制，将会发生什么呢？通常来说，无论模块的设计有多封闭，总是有各种各样的变化会打破这种封闭。
+
+因此，完全闭合是不现实的，所以必须讲究策略。也就是说，**程序员必须甄别其设计对哪些变化封闭。** 这需要一些基于经验的预测。有经验的程序员会很好的了解用户和所在的行业，以判断各种变化的可能性。然后可以确定对最有可能的变化保持开放封闭原则。
+
+### 闭合是基于抽象的
+
+java 对排序有很好的支持，已经帮我们对排序进行了某种程度的抽象，使用排序接口Comparable和比较器Comparator都可以。
+
+我们以排序接口Comparable为例
+
+```
+public interface Shape extends Comparable<Shape> {
+    void draw();
+
+    int getSort();
+}
+
+public class Cicle implements Shape {
+
+    int sort;
+
+    public Cicle(int sort) {
+        this.sort = sort;
+    }
+
+    @Override
+    public int getSort() {
+        return sort;
+    }
+
+    @Override
+    public int compareTo(Shape o) {
+        //1表示第二个对象比前一个大，0表示其相等，-1表示比前一个小
+        return o.getSort() - sort;
+    }
+
+    @Override
+    public void draw() {
+        log.info("better --》 {}", "画Cicle");
+    }
+}
+
+调用方法
+List<Shape> shapes = Lists.newArrayList();
+shapes.add(new Cicle(3));
+shapes.add(new Square(1));
+shapes.add(new Rectangle(2));
+drawShape(shapes);
+
+public static void drawShape(List<Shape> shapes) {
+   Collections.sort(shapes);
+   shapes.forEach(shape -> {
+      shape.draw();
+   });
+}  
+```
+
+### 进一步的扩展闭合
+
+** 需求变化是唯一不变的真理 ** 
+
+### 总结
+
+关于开闭原则（Open Closed Principle）还有很多可以讲的。在很多方面这个原则都是面向对象设计的核心。始终遵循该原则才能从面向对象技术中持续地获得最大的益处，例如：可重用性和可维护性。同时，对该原则的遵循也不是通过使用一种面向对象的编程语言就能够达成的。更确切的说，** 它需要程序员更专注于将抽象技术应用到程序中那些趋于变化的部分上。**
