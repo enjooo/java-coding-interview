@@ -4,9 +4,9 @@
 
 可能包含的内容：
 1. [《面向对象》](https://gitee.com/vftour-stu/interview/tree/master/oop)
-    - [《java基础》]()
+    - [《java基础》](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/basic)
     - [《设计原则》](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/principle)
-    - [《设计模式》]()
+    - [《设计模式》](https://gitee.com/vftour-stu/interview/tree/master/oop/src/main/java/com/vftour/study/oop/designpattern)
   
 2. [《Spring Boot》]()
 3. [《Spring Cloud》]()
