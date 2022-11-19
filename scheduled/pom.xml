@@ -19,6 +19,7 @@
         <dependency>
             <groupId>com.vftour.study</groupId>
             <artifactId>core</artifactId>
+            <version>${interview.project.version}</version>
         </dependency>
 
         <dependency>

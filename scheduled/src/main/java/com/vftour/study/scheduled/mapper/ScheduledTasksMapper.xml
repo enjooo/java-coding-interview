@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vftour.study.scheduled.mapper.ScheduledTasksMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="scheduledTasksResultMap" type="com.vftour.study.scheduled.model.ScheduledTasks">
+        <id column="id" property="id" />
+        <result column="task_name" property="taskName" />
+        <result column="job_class" property="jobClass" />
+        <result column="job_group" property="jobGroup" />
+        <result column="cron" property="cron" />
+        <result column="params" property="params" />
+        <result column="remarks" property="remarks" />
+        <result column="status" property="status" />
+
+        <result column="deleted" property="deleted" />
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_id" property="createId"/>
+        <result column="create_name" property="createName"/>
+        <result column="update_id" property="updateId"/>
+        <result column="update_name" property="updateName"/>
+    </resultMap>
+    <select id="selectTaskPage" resultMap="scheduledTasksResultMap">
+        select *
+        from crq_scheduled_tasks
+        where deleted = false
+        <if test='name != null'>  and task_name = #{name} </if>
+
+        order by create_time desc
+    </select>
+
+</mapper>
