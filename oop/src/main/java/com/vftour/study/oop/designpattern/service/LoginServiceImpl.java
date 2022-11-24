@@ -1,6 +1,5 @@
 package com.vftour.study.oop.designpattern.service;
 
-import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.ILoginHandler;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginHandlerFactory;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
@@ -24,7 +23,7 @@ public class LoginServiceImpl implements ILoginService {
     private LoginHandlerFactory loginHandlerFactory;
 
     @Override
-    public Result<Serializable> login(LoginRequest request) {
+    public String login(LoginRequest request) {
         LoginType loginType = LoginType.of(request.getLoginType());
 
         // 根据 loginType 找到对应的提交处理器
@@ -32,7 +31,7 @@ public class LoginServiceImpl implements ILoginService {
 
         // 判断 loginType 对应的 handler 是否存在
         if (submitHandler == null) {
-            return Result.fail("非法的提交类型: " + loginType);
+            return "非法的提交类型: " + loginType;
         }
 
         // 处理提交

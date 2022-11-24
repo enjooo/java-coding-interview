@@ -1,10 +1,7 @@
 package com.vftour.study.oop.designpattern.service;
 
-import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
 import org.springframework.lang.NonNull;
-
-import java.io.Serializable;
 
 /**
  * ILoginService
@@ -15,5 +12,5 @@ import java.io.Serializable;
  */
 public interface ILoginService {
 
-    Result<Serializable> login(@NonNull LoginRequest request);
+    String login(@NonNull LoginRequest request);
 }

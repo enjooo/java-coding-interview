@@ -1,6 +1,5 @@
 package com.vftour.study.oop.designpattern.pattern.strategy.handler;
 
-import com.vftour.study.oop.api.Result;
 import com.vftour.study.oop.designpattern.pattern.strategy.ILoginHandler;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginRequest;
 import com.vftour.study.oop.designpattern.pattern.strategy.LoginType;
@@ -25,9 +24,9 @@ public class PasswordLoginHandler implements ILoginHandler<Serializable> {
     }
 
     @Override
-    public Result<Serializable> handle(LoginRequest request) {
+    public String handle(LoginRequest request) {
         log.info("密码模式登录：formInput={}", request.getFormInput());
 
-        return Result.success("");
+        return "success";
     }
 }

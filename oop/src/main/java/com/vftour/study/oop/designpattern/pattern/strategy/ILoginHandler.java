@@ -1,7 +1,5 @@
 package com.vftour.study.oop.designpattern.pattern.strategy;
 
-import com.vftour.study.oop.api.Result;
-
 import java.io.Serializable;
 
 /**
@@ -25,5 +23,5 @@ public interface ILoginHandler<R extends Serializable> {
      * @param request 请求
      * @return 响应
      */
-    Result<R> handle(LoginRequest request);
+    String handle(LoginRequest request);
 }

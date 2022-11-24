@@ -15,4 +15,11 @@
     <packaging>jar</packaging>
     <description>面向对象</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.vftour.study</groupId>
+            <artifactId>core</artifactId>
+            <version>${interview.project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
