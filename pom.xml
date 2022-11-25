@@ -16,6 +16,7 @@
         <module>cache</module>
         <module>scheduled</module>
         <module>core</module>
+        <module>read-a-book</module>
     </modules>
 
     <!--  这里的属性会被子模块继承  -->

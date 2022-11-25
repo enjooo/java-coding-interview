@@ -31,7 +31,7 @@
 
 类和对象的类比
 
-![Alt pic](/resources/images/2f6e-1d06b9fefc46fc1727ec65801ee4045c.jpg "类和对象的类比")
+![这里运动员是类，具体的梅西是对象](/resources/images/2f6e-1d06b9fefc46fc1727ec65801ee4045c.jpg "类和对象的类比")
 
 > 这里运动员是类，具体的梅西是对象；
 
